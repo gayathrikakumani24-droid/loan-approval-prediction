@@ -1,4 +1,4 @@
-# 🏦 Smart Loan Approval Prediction System
+# 🏦 Smart Loan Approval Prediction System - LoanIQ
 
 An AI-powered Loan Approval Prediction System built using **Machine Learning** and **Streamlit**. This application predicts whether a loan application is likely to be approved or rejected based on applicant details such as income, CIBIL score, loan amount, assets, education, and employment status.
 
@@ -63,17 +63,18 @@ Additional approval checks based on:
 Loan_Approval_Project/
 │
 ├── app.py
-├── model.py
+├── train_model.py
 ├── loan_approval_dataset.csv
 ├── requirements.txt
 ├── README.md
+├── trained_model.pkl
+├── feature_columns.pkl
 │
-├── assets/
+├── Demo/
 │   ├── screenshots
-│   └── images
 │
-└── models/
-    └── trained_model.pkl
+
+
 ```
 
 ---
@@ -317,19 +318,19 @@ http://localhost:8501
 Add screenshot here:
 
 ```text
-assets/screenshots/dashboard.png
+Demo/screenshots/dashboard.png
 ```
 
 ### Approval Result
 
 ```text
-assets/screenshots/approved.png
+Demo/screenshots/approved.png
 ```
 
 ### Rejection Result
 
 ```text
-assets/screenshots/rejected.png
+Demo/screenshots/rejected.png
 ```
 
 ---
