@@ -1,6 +1,6 @@
 # 🏦 Smart Loan Approval Prediction System - LoanIQ
 
-An AI-powered Loan Approval Prediction System built using **Machine Learning** and **Streamlit**. This application predicts whether a loan application is likely to be approved or rejected based on applicant details such as income, CIBIL score, loan amount, assets, education, and employment status.
+An AI-powered Loan Approval Prediction System built using Random Forest Machine Learning and Streamlit. The system evaluates applicant financial profiles, credit scores, and asset information to predict loan approval decisions with confidence scores and explainable risk indicators.
 
 The project also provides interactive visualizations and personalized loan suggestions for approved applicants.
 
@@ -10,10 +10,12 @@ The project also provides interactive visualizations and personalized loan sugge
 
 ### 🤖 Machine Learning Based Prediction
 
-* Uses a Decision Tree Classifier.
+* Uses a Random Forest Classifier for robust and accurate predictions.
 * Handles imbalanced datasets through upsampling.
 * Probability calibration using CalibratedClassifierCV.
 * Predicts Loan Approval/Rejection with confidence score.
+* Reduces overfitting compared to a single Decision Tree.
+
 
 ### 📊 Data Visualization
 
@@ -146,20 +148,32 @@ Benefits:
 Model Used:
 
 ```python
-DecisionTreeClassifier
+RandomForestClassifier
 ```
 
 Parameters:
 
 ```python
-DecisionTreeClassifier(
-    criterion='entropy',
-    class_weight='balanced',
-    max_depth=6,
+RandomForestClassifier(
+    n_estimators=200,
+    max_depth=8,
     min_samples_leaf=5,
+    class_weight='balanced',
     random_state=42
 )
 ```
+
+Why Random Forest?
+
+* Combines multiple decision trees for improved accuracy.
+* Reduces overfitting.
+* Provides more stable predictions.
+* Utilizes multiple applicant features instead of relying heavily on a single feature.
+* Produces better generalization on unseen data.
+
+```
+```
+
 
 ---
 
@@ -251,7 +265,59 @@ Shows most influential features:
 * Loan Amount
 * Assets
 
----
+# 📊 Model Performance
+
+The LoanIQ system uses a **Random Forest Classifier** combined with **CalibratedClassifierCV** to provide accurate and reliable loan approval predictions.
+
+### Evaluation Results
+
+| Metric    | Score              |
+| --------- | ------------------ |
+| Accuracy  | **97.83%**         |
+| Precision | **99% (Approved)** |
+| Precision | **97% (Rejected)** |
+| Recall    | **97% (Approved)** |
+| Recall    | **99% (Rejected)** |
+| F1-Score  | **98%**            |
+
+### Classification Report
+
+```text
+Accuracy: 97.83%
+
+              precision    recall  f1-score   support
+
+Approved(0)      0.99      0.97      0.98       323
+Rejected(1)      0.97      0.99      0.98       323
+
+accuracy                              0.98       646
+macro avg         0.98      0.98      0.98       646
+weighted avg      0.98      0.98      0.98       646
+```
+
+### Feature Importance Analysis
+
+The Random Forest model identified the following features as the most influential factors in loan approval decisions:
+
+| Feature            | Importance |
+| ------------------ | ---------- |
+| CIBIL Score        | 86.53%     |
+| Loan Term          | 4.77%      |
+| Loan Amount        | 1.84%      |
+| Total Assets       | 1.18%      |
+| Commercial Assets  | 1.11%      |
+| Residential Assets | 1.08%      |
+| Luxury Assets      | 1.07%      |
+| Bank Assets        | 0.97%      |
+| Annual Income      | 0.93%      |
+
+### Performance Summary
+
+* Achieved **97.83% prediction accuracy** on the test dataset.
+* Demonstrates strong classification capability for both approved and rejected loan applications.
+* Utilizes probability calibration for more reliable confidence scores.
+* Provides explainable predictions through feature importance analysis.
+* Suitable for educational demonstrations, machine learning projects, and portfolio showcases.
 
 # 🚀 Installation
 
@@ -358,7 +424,6 @@ Confidence: 84.18%
 
 # 🔮 Future Enhancements
 
-* Random Forest Classifier
 * XGBoost Integration
 * SHAP Explainability
 * PDF Loan Report Generation
