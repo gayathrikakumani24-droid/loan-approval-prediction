@@ -9,7 +9,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.calibration import CalibratedClassifierCV
 from sklearn.metrics import accuracy_score, classification_report
 # Load dataset
-df = pd.read_csv("E:\\full_stack\\Loan_approval\\loan_approval_dataset (1).csv")
+df = pd.read_csv("loan_approval_dataset (1).csv")
 df.columns = df.columns.str.strip()
 
 # Remove extra spaces
