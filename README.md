@@ -2,6 +2,7 @@
 
 🌐 Live Demo: https://loaniq-assessment.streamlit.app/
 
+<img width="1366" height="641" alt="Screenshot (319)" src="https://github.com/user-attachments/assets/f43048ad-b79a-489b-bb93-62c00e201021" />
 An AI-powered Loan Approval Prediction System built using Random Forest Machine Learning and Streamlit. The system evaluates applicant financial profiles, credit scores, and asset information to predict loan approval decisions with confidence scores and explainable risk indicators.
 
 The project also provides interactive visualizations and personalized loan suggestions for approved applicants.
