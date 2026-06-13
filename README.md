@@ -383,23 +383,23 @@ http://localhost:8501
 
 ### Dashboard
 
-Add screenshot here:
+<img width="1366" height="647" alt="Screenshot (316)" src="https://github.com/user-attachments/assets/b5381aad-a393-43a5-b6d8-d976331ff5ef" />
 
-```text
-Demo/screenshots/dashboard.png
-```
 
 ### Approval Result
 
-```text
-Demo/screenshots/approved.png
-```
+<img width="1366" height="641" alt="Screenshot (319)" src="https://github.com/user-attachments/assets/602cb693-d3fb-43ec-aecc-25c4fcd24d33" />
 
 ### Rejection Result
 
-```text
-Demo/screenshots/rejected.png
-```
+<img width="1366" height="652" alt="Screenshot (320)" src="https://github.com/user-attachments/assets/4a2e8444-a8d4-43b7-a644-1ca2d36901b9" />
+
+
+### Dataset Analysis
+
+<img width="1366" height="640" alt="Screenshot (322)" src="https://github.com/user-attachments/assets/16c4a01c-102f-4ab3-b553-9d1310e76f89" />
+
+
 
 ---
 
